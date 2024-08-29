@@ -6,7 +6,7 @@ import os
 import google.generativeai as genai 
 
 
-genai.configure(api_key = os.environ['Google_Api_Key'])
+genai.configure(api_key=os.environ['Google_Api_key'])
 
 
 model = genai.GenerativeModel("gemini-pro")
@@ -25,3 +25,4 @@ submit = st.button("Ask the question")
 if submit:
   response = get_gemini_response(input)
   st.subheader("the response is")
+  st.write(response)
